@@ -1917,3 +1917,19 @@ a {
     }
 
 }
+@media (max-width: 768px) {
+
+    .hero-text {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .hero h1 {
+        width: 100%;
+        font-size: 52px;
+        letter-spacing: -4px;
+        word-break: keep-all;
+        white-space: normal;
+    }
+
+}
