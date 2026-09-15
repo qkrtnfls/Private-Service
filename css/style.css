@@ -1811,3 +1811,109 @@ a {
 .hidden-log.show {
     opacity: 1;
 }
+/* =========================
+   GLOBAL MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .header {
+        height: auto;
+        padding: 22px 5% 18px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .logo span {
+        font-size: 25px;
+    }
+
+    .logo small {
+        font-size: 8px;
+    }
+
+    .nav {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px 24px;
+    }
+
+    .nav a {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+    }
+
+
+    /* =========================
+       HOME HERO
+    ========================= */
+
+    .hero {
+        min-height: auto;
+        padding: 90px 5% 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 60px;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .small-text {
+        margin-bottom: 30px;
+        font-size: 9px;
+        letter-spacing: 3px;
+    }
+
+    .hero h1 {
+        font-size: 58px;
+        line-height: 1.05;
+        letter-spacing: -4px;
+    }
+
+    .description {
+        margin-top: 35px;
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+    .request-button {
+        margin-top: 40px;
+        padding: 16px 22px;
+        font-size: 11px;
+    }
+
+    .hero-image {
+        width: 70%;
+        align-self: center;
+    }
+
+    .image-placeholder {
+        aspect-ratio: 4 / 5;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .footer {
+        padding: 25px 5%;
+        font-size: 8px;
+    }
+
+}
