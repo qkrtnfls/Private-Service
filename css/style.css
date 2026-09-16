@@ -1933,3 +1933,21 @@ a {
     }
 
 }
+@media screen and (max-width: 768px) {
+
+    .about-page .about-intro h1,
+    .about-page h1 {
+        font-size: 42px !important;
+        line-height: 1.25 !important;
+        letter-spacing: -3px !important;
+        word-break: keep-all !important;
+    }
+
+    .about-page .about-intro p,
+    .about-page > section p {
+        font-size: 14px !important;
+        line-height: 1.9 !important;
+        word-break: keep-all !important;
+    }
+
+}
