@@ -341,7 +341,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
 
             }, 14000);
-            
+
             setTimeout(function () {
                 var response =
                     document.querySelector(".request-response");
@@ -497,106 +497,98 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     // =========================
-    // GLITCH FUNCTION
-    // =========================
+// GLITCH FUNCTION
+// =========================
 
-    function doGlitch() {
+function doGlitch() {
 
-        glitch.classList.remove("active");
+    glitch.classList.remove("active");
 
-        document.body.classList.remove("screen-glitch");
+    document.body.classList.remove("screen-glitch");
 
+    // 애니메이션 강제 재시작
+    void glitch.offsetWidth;
 
-        // 애니메이션 강제 재시작
+    glitch.classList.add("active");
+    document.body.classList.add("screen-glitch");
 
-        void glitch.offsetWidth;
+    // 글자도 순간적으로 깨짐
+    if (resultText) {
 
-
-        glitch.classList.add("active");
-
-        document.body.classList.add("screen-glitch");
-
-
-        // 글자도 순간적으로 깨짐
-
-        if (resultText) {
-
-            resultText.classList.add("text-glitch");
-
-            setTimeout(function () {
-
-                resultText.classList.remove("text-glitch");
-
-            }, 350);
-
-        }
-
-
-        // 글리치 종료
+        resultText.classList.add("text-glitch");
 
         setTimeout(function () {
 
-            glitch.classList.remove("active");
-
-            document.body.classList.remove("screen-glitch");
+            resultText.classList.remove("text-glitch");
 
         }, 350);
 
     }
 
+    // 글리치 종료
+    setTimeout(function () {
 
-    // =========================
-    // 1차 글리치
-    // =========================
+        glitch.classList.remove("active");
+
+        document.body.classList.remove("screen-glitch");
+
+    }, 350);
+
+}
+
+
+// =========================
+// 1차 글리치
+// =========================
+
+setTimeout(function () {
+
+    doGlitch();
+
+}, 7000);
+
+
+// =========================
+// 2차 글리치
+// =========================
+
+setTimeout(function () {
+
+    doGlitch();
+
+}, 15000);
+
+
+// =========================
+// INTERNAL 화면 암전 → HOME
+// =========================
+
+setTimeout(function () {
+
+    // INTERNAL 재접속 방지
+
+    sessionStorage.setItem(
+        "internalBlocked",
+        "true"
+    );
+
+
+    // 갑자기 화면 꺼짐
+
+    document.body.classList.add(
+        "page-blackout"
+    );
+
+
+    // 암전 후 HOME
 
     setTimeout(function () {
 
-        doGlitch();
+        window.location.href =
+            "index.html";
 
-    }, 4000);
+    }, 1000);
 
-
-    // =========================
-    // 2차 글리치
-    // =========================
-
-    setTimeout(function () {
-
-        doGlitch();
-
-    }, 12000);
-
-
-    // =========================
-    // INTERNAL 화면 암전 → HOME
-    // =========================
-
-    setTimeout(function () {
-
-        // INTERNAL 재접속 방지
-
-        sessionStorage.setItem(
-            "internalBlocked",
-            "true"
-        );
-
-
-        // 갑자기 화면 꺼짐
-
-        document.body.classList.add(
-            "page-blackout"
-        );
-
-
-        // 아주 짧은 암전 후 HOME
-
-        setTimeout(function () {
-
-            window.location.href =
-                "index.html";
-
-        }, 150);
-
-    }, 16500);
+}, 23000);
 
 });
