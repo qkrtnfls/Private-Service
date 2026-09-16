@@ -18,6 +18,33 @@
 
 <body>
 
+    <!-- ACCESS WARNING -->
+<div class="access-warning" id="accessWarning">
+
+    <div class="warning-box">
+
+        <div class="warning-title">
+            WARNING
+        </div>
+
+        <div class="warning-line"></div>
+
+        <p>
+            미허가 방문자가 감지되었습니다.
+        </p>
+
+        <small>
+            접근 기록이 저장되었습니다.
+        </small>
+
+        <button id="warningConfirm">
+            확인
+        </button>
+
+    </div>
+
+</div>
+
 <main class="internal-page">
 
     <!-- INTERNAL HEADER -->
@@ -106,13 +133,13 @@
 
         <div class="case-result">
 
-            <span>RESULT</span>
+    <span>RESULT</span>
 
-            <p>
-                SUCCESS
-            </p>
+    <p id="resultText">
+        SUCCESS
+    </p>
 
-        </div>
+</div>
 
     </section>
 
@@ -122,27 +149,27 @@
    <section class="access-log">
 
     <div class="internal-label">
-        ACCESS LOG
+        접속 기록
     </div>
 
     <div class="log-item">
         <span class="log-time"></span>
-        <span>FILE OPENED</span>
+        <span>파일 열람</span>
     </div>
 
     <div class="log-item">
         <span class="log-time"></span>
-        <span>ACCESS GRANTED</span>
+        <span>접근 승인</span>
     </div>
 
     <div class="log-item">
         <span class="log-time"></span>
-        <span>VISITOR DETECTED</span>
+        <span>방문자 감지</span>
     </div>
 
     <div class="log-item hidden-log" id="hiddenLog">
         <span class="log-time"></span>
-        <span>ACCESS LOG UPDATED.</span>
+        <span>접속 기록 저장</span>
     </div>
 
 </section>
@@ -168,6 +195,7 @@
 
 <script src="js/script.js"></script>
 
+<div class="glitch-overlay"></div>
 </body>
 
 </html>
