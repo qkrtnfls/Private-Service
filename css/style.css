@@ -2556,7 +2556,7 @@ body.page-blackout {
 
 
     /* =========================================
-       HOME
+       HOME - CCTV
     ========================================= */
 
     .hero-image {
@@ -2592,26 +2592,20 @@ body.page-blackout {
 
 
     /* =========================================
-       ABOUT
-       필요한 일이라면 무엇이든 맡겨주세요.
+       ABOUT - TITLE
     ========================================= */
 
-    .intro h2 {
-        font-size: 38px;
-        line-height: 1.08;
-        letter-spacing: -2.5px;
+    .about-page .page-title h1 {
+        font-size: 42px;
+        line-height: 1.05;
+        letter-spacing: -3px;
         word-break: keep-all;
     }
 
 
     /* =========================================
-       INTERNAL
-       직원 사진
+       INTERNAL - ARCHIVED STAFF PROFILE
     ========================================= */
-
-    .internal-page .staff-photo {
-        width: 75%;
-    }
 
     .internal-page .staff-profile .internal-label {
         margin-bottom: 20px;
@@ -2622,9 +2616,14 @@ body.page-blackout {
     }
 
 
-    /* =========================================
-       INTERNAL - 모바일 직원 배치
-    ========================================= */
+    /* 사진 크기 */
+
+    .internal-page .staff-photo {
+        width: 65%;
+    }
+
+
+    /* 직원 2명 세로 배치 */
 
     .internal-page .staff-list {
         grid-template-columns: 1fr;
