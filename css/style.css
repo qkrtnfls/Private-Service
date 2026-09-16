@@ -2583,7 +2583,7 @@ body.page-blackout {
     }
 
 
-       /* =========================================
+/* =========================================
    ABOUT
    필요한 일이라면 무엇이든 맡겨주세요.
 ========================================= */
@@ -2594,7 +2594,12 @@ body.page-blackout {
     letter-spacing: -2px !important;
     word-break: keep-all !important;
 }
+/* ABOUT - 모바일 프로필 사진 */
 
+.about-page .staff-image {
+    width: 70% !important;
+    aspect-ratio: 3 / 4.5 !important;
+}
 
 /* =========================================
    INTERNAL - 직원 사진
@@ -2628,5 +2633,16 @@ body.page-blackout {
     grid-template-columns: 1fr !important;
     gap: 40px !important;
 }
+
+}
+@media (max-width: 768px) {
+
+    .internal-page .staff-profile .internal-label {
+        margin-bottom: 5px !important;
+    }
+
+    .internal-page .staff-profile .staff-list {
+        margin-top: 0 !important;
+    }
 
 }
