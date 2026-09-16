@@ -1933,21 +1933,382 @@ a {
     }
 
 }
+/* =========================
+   ACCESS WARNING
+========================= */
+
+.access-warning {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.88);
+
+    opacity: 1;
+    visibility: visible;
+
+    transition:
+        opacity 0.5s ease,
+        visibility 0.5s ease;
+}
+
+.access-warning.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.warning-box {
+    width: 420px;
+    max-width: 85%;
+
+    padding: 32px 35px;
+
+    background: #101010;
+    border: 1px solid #3a3a3a;
+
+    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.7);
+
+    text-align: left;
+}
+
+.warning-title {
+    color: #b5b3ae;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.warning-line {
+    width: 100%;
+    height: 1px;
+
+    margin: 22px 0 25px;
+
+    background: #292929;
+}
+
+.warning-box p {
+    margin: 0 0 12px;
+
+    color: #d0cec9;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 1px;
+}
+
+.warning-box small {
+    display: block;
+
+    color: #666;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.warning-box button {
+    display: block;
+
+    margin: 30px 0 0 auto;
+
+    padding: 9px 24px;
+
+    background: transparent;
+    border: 1px solid #444;
+
+    color: #888;
+
+    font-family: inherit;
+    font-size: 10px;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.warning-box button:hover {
+    color: #ddd;
+    border-color: #777;
+}
+
+
+/* MOBILE */
+
 @media screen and (max-width: 768px) {
 
-    .about-page .about-intro h1,
-    .about-page h1 {
-        font-size: 42px !important;
-        line-height: 1.25 !important;
-        letter-spacing: -3px !important;
-        word-break: keep-all !important;
+    .warning-box {
+        width: 330px;
+        padding: 28px 25px;
     }
 
-    .about-page .about-intro p,
-    .about-page > section p {
-        font-size: 14px !important;
-        line-height: 1.9 !important;
-        word-break: keep-all !important;
+    .warning-title {
+        font-size: 11px;
     }
 
+    .warning-box p {
+        font-size: 13px;
+    }
+
+}
+/* =========================
+   NOISE + RANDOM GLITCH
+========================= */
+
+.glitch-overlay {
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 99999;
+
+    /* 평소에도 아주 약한 노이즈 */
+    opacity: 0.08;
+
+    background-image:
+        repeating-radial-gradient(
+            circle at 0 0,
+            rgba(255, 255, 255, 0.15) 0,
+            rgba(255, 255, 255, 0.15) 1px,
+            transparent 1px,
+            transparent 3px
+        );
+
+    background-size: 4px 4px;
+
+    mix-blend-mode: screen;
+}
+
+
+/* =========================
+   글리치 발생
+========================= */
+
+.glitch-overlay.active {
+    animation: glitchOverlay 0.35s steps(2, end);
+}
+
+
+/* 화면 자체 흔들림 */
+
+body.screen-glitch {
+    animation: screenShake 0.35s steps(2, end);
+}
+
+
+/* =========================
+   GLITCH OVERLAY
+========================= */
+
+@keyframes glitchOverlay {
+
+    0% {
+        opacity: 0.08;
+        transform: translateX(0);
+    }
+
+    10% {
+        opacity: 1;
+        transform: translateX(-12px);
+    }
+
+    20% {
+        opacity: 0.5;
+        transform: translateX(10px);
+    }
+
+    30% {
+        opacity: 1;
+        transform: translateX(-7px);
+    }
+
+    45% {
+        opacity: 0.35;
+        transform: translateX(12px);
+    }
+
+    60% {
+        opacity: 0.9;
+        transform: translateX(-5px);
+    }
+
+    75% {
+        opacity: 0.5;
+        transform: translateX(7px);
+    }
+
+    100% {
+        opacity: 0.15;
+        transform: translateX(0);
+    }
+}
+
+
+/* =========================
+   SCREEN SHAKE
+========================= */
+
+@keyframes screenShake {
+
+    0% {
+        transform: translate(0, 0);
+        filter: none;
+    }
+
+    15% {
+        transform: translate(-5px, 2px);
+        filter: contrast(1.5);
+    }
+
+    30% {
+        transform: translate(6px, -1px);
+        filter: contrast(2);
+    }
+
+    45% {
+        transform: translate(-3px, 1px);
+    }
+
+    60% {
+        transform: translate(4px, 0);
+        filter: contrast(1.5);
+    }
+
+    75% {
+        transform: translate(-2px, -1px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+        filter: none;
+    }
+}
+/* =========================
+   TEXT GLITCH
+========================= */
+
+#resultText.text-glitch {
+    animation: textGlitch 0.35s steps(2, end);
+}
+
+
+@keyframes textGlitch {
+
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    20% {
+        transform: translateX(-5px);
+        opacity: 0.5;
+    }
+
+    40% {
+        transform: translateX(6px);
+        opacity: 1;
+    }
+
+    60% {
+        transform: translateX(-3px);
+        opacity: 0.4;
+    }
+
+    80% {
+        transform: translateX(4px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================
+   PAGE BLACKOUT
+========================= */
+
+body.page-blackout {
+    background: #000 !important;
+    opacity: 0;
+}
+
+
+@keyframes pageBlackout {
+
+    0% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 0;
+        background: #000;
+    }
+
+}
+/* =========================
+   REQUEST ERROR
+========================= */
+
+.request-error {
+    margin-bottom: 30px;
+    padding: 16px 18px;
+    border-left: 2px solid #111;
+}
+
+.request-error p {
+    margin: 0;
+    font-size: 13px;
+    color: #b00000;
+}
+/* =========================
+   FIELD ERROR
+========================= */
+
+.field-error {
+    display: none;
+    margin: 7px 0 0;
+    font-size: 12px;
+    color: #b00000;
+}
+
+.form-group.error .field-error {
+    display: block;
+}
+
+.form-group.error input {
+    animation: inputShake 0.25s ease;
+    border-color: #b00000;
+}
+
+@keyframes inputShake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-4px);
+    }
+
+    50% {
+        transform: translateX(4px);
+    }
+
+    75% {
+        transform: translateX(-3px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
