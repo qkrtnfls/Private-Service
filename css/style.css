@@ -2646,3 +2646,10 @@ body.page-blackout {
     }
 
 }
+@media (max-width: 768px) {
+
+    .internal-page .staff-profile .staff-card {
+        border-top: none !important;
+    }
+
+}
