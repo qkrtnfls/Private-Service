@@ -2579,3 +2579,12 @@ body.page-blackout {
         font-size: 15px;
     }
 }
+/* INTERNAL - ARCHIVED STAFF PROFILE */
+
+.internal-page .staff-profile .internal-label {
+    margin-bottom: 20px;
+}
+
+.internal-page .staff-profile .staff-list {
+    margin-top: 0;
+}
