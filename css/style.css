@@ -2328,7 +2328,7 @@ body.page-blackout {
 .cctv-frame {
     position: relative;
     width: 100%;
-    max-width: 520px;
+    max-width: 620px;
     aspect-ratio: 4 / 3;
     overflow: hidden;
     background: #111;
