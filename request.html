@@ -58,75 +58,83 @@
 
         <form class="request-form">
 
-            <div class="form-group">
-                <label for="name">
-                    NAME
-                </label>
+           <div class="form-group">
+                    <label for="name">
+                        NAME
+                    </label>
 
-                <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="이름을 입력해 주세요."
-                >
-            </div>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="이름을 입력해 주세요."
+                    >
 
-
-            <div class="form-group">
-                <label for="contact">
-                    CONTACT
-                </label>
-
-                <input
-                    type="text"
-                    id="contact"
-                    name="contact"
-                    placeholder="연락 가능한 번호 또는 이메일"
-                >
-            </div>
+                    <p class="field-error"></p>
+                </div>
 
 
-            <div class="form-group">
-                <label for="category">
-                    REQUEST TYPE
-                </label>
+                            <div class="form-group">
+                    <label for="contact">
+                        CONTACT
+                    </label>
 
-                <select id="category" name="category">
-                    <option value="">선택해 주세요.</option>
-                    <option value="personal">PERSONAL ASSISTANCE</option>
-                    <option value="information">INFORMATION COLLECTION</option>
-                    <option value="special">SPECIAL REQUEST</option>
-                    <option value="problem">PROBLEM SOLVING</option>
-                    <option value="other">OTHER</option>
-                </select>
-            </div>
+                    <input
+                        type="text"
+                        id="contact"
+                        name="contact"
+                        placeholder="연락 가능한 번호 또는 이메일"
+                    >
 
-
-            <div class="form-group">
-                <label for="target">
-                    SUBJECT
-                </label>
-
-                <input
-                    type="text"
-                    id="target"
-                    name="target"
-                    placeholder="관련된 대상 또는 장소"
-                >
-            </div>
+                    <p class="field-error"></p>
+                </div>
 
 
-            <div class="form-group">
-                <label for="message">
-                    REQUEST DETAILS
-                </label>
+                        <div class="form-group">
+                    <label for="category">
+                        REQUEST TYPE
+                    </label>
 
-                <textarea
-                    id="message"
-                    name="message"
-                    placeholder="의뢰 내용을 가능한 한 구체적으로 작성해 주세요."
-                ></textarea>
-            </div>
+                    <select id="category" name="category">
+                        <option value="">선택해 주세요.</option>
+                        <option value="personal">PERSONAL ASSISTANCE</option>
+                        <option value="information">INFORMATION COLLECTION</option>
+                        <option value="special">SPECIAL REQUEST</option>
+                        <option value="problem">PROBLEM SOLVING</option>
+                        <option value="other">OTHER</option>
+                    </select>
+
+                    <p class="field-error"></p>
+                </div>
+                            <div class="form-group">
+                    <label for="target">
+                        SUBJECT
+                    </label>
+
+                    <input
+                        type="text"
+                        id="target"
+                        name="target"
+                        placeholder="관련된 대상 또는 장소"
+                    >
+
+                    <p class="field-error"></p>
+                </div>
+
+
+                            <div class="form-group">
+                    <label for="message">
+                        REQUEST DETAILS
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="의뢰 내용을 가능한 한 구체적으로 작성해 주세요."
+                    ></textarea>
+
+                    <p class="field-error"></p>
+                </div>
 
 
             <div class="form-notice">
