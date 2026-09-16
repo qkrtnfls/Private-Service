@@ -2312,3 +2312,6 @@ body.page-blackout {
         transform: translateX(0);
     }
 }
+.about-page p {
+    word-break: keep-all;
+}
