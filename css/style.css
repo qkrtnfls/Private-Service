@@ -2583,43 +2583,50 @@ body.page-blackout {
     }
 
 
-        /* =========================================
-        ABOUT
-        필요한 일이라면 무엇이든 맡겨주세요.
-        ========================================= */
+       /* =========================================
+   ABOUT
+   필요한 일이라면 무엇이든 맡겨주세요.
+========================================= */
 
-        .about-page .page-title h1 {
-            font-size: 34px !important;
-            line-height: 1.15 !important;
-            letter-spacing: -2px !important;
-            word-break: keep-all !important;
-        }
-
-
-            /* =========================================
-            INTERNAL - 직원 사진
-            ========================================= */
-
-        .internal-page .staff-photo {
-            width: 150px !important;
-            height: 200px !important;
-            aspect-ratio: 3 / 4 !important;
-            overflow: hidden;
-        }
-
-        .internal-page .staff-photo img {
-            width: 100% !important;
-            height: 100% !important;
-            object-fit: cover;
-        }
+.about-page .page-title h1 {
+    font-size: 34px !important;
+    line-height: 1.15 !important;
+    letter-spacing: -2px !important;
+    word-break: keep-all !important;
+}
 
 
-        /* =========================================
-        INTERNAL - 모바일 직원 배치
-        ========================================= */
+/* =========================================
+   INTERNAL - 직원 사진
+========================================= */
 
-        .internal-page .staff-list {
-            grid-template-columns: 1fr;
-            gap: 40px;
-        }
-    }
+.internal-page .staff-profile .staff-list .staff-card .staff-photo {
+    width: 150px !important;
+    max-width: 150px !important;
+    height: 200px !important;
+    max-height: 200px !important;
+    aspect-ratio: 3 / 4 !important;
+    overflow: hidden !important;
+}
+
+.internal-page .staff-profile .staff-list .staff-card .staff-photo img {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    max-height: none !important;
+    object-fit: cover !important;
+}
+
+
+/* =========================================
+   INTERNAL - 모바일 직원 배치
+========================================= */
+
+.internal-page .staff-profile .staff-list {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+}
+
+}
