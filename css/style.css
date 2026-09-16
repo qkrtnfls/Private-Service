@@ -2591,17 +2591,17 @@ body.page-blackout {
     }
 
 
-    /* =========================================
-       ABOUT
-       필요한 일이라면 무엇이든 맡겨주세요.
-    ========================================= */
+        /* =========================================
+        ABOUT
+        필요한 일이라면 무엇이든 맡겨주세요.
+        ========================================= */
 
-    .intro h2 {
-        font-size: 38px;
-        line-height: 1.08;
-        letter-spacing: -2.5px;
-        word-break: keep-all;
-    }
+        .about-page .page-title h1 {
+            font-size: 34px !important;
+            line-height: 1.15 !important;
+            letter-spacing: -2px !important;
+            word-break: keep-all !important;
+        }
 
 
     /* =========================================
